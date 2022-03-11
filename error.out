@@ -1,0 +1,102 @@
+2022-03-11_15:05:07.26035 [2022-03-11 15:05:07,257] [http-nio-127.0.0.1-8080-exec-3] INFO  c.m.AuditLogService - CEF:0|MorpheusData|Morpheus|5.4.3|admin:plugins#upload|plugin Created|src=192.168.4.31 suid=1 suser=admin request=http://morphues.amtestlab.local/admin/plugins/upload requestMethod=POST cs1Label=Object Type cs1=plugin cs2=plugin cs2Label=Object Name cn2=1 cn2Label=Account ID 
+2022-03-11_15:05:07.26037 [2022-03-11 15:05:07,257] [grails.rabbit.exchange.pluginReloadEvent.container-2] WARN  c.m.p.PluginManagerService - Reloading Morpheus plugins... 
+2022-03-11_15:05:07.26038 [2022-03-11 15:05:07,257] [grails.rabbit.exchange.pluginReloadEvent.container-2] INFO  c.m.p.PluginManagerService - Morpheus Plugin Directory: /var/opt/morpheus/morpheus-ui/plugins 
+
+==> /var/log/morpheus/nginx/morpheus-ssl-access.log <==
+192.168.4.31 - - [11/Mar/2022:20:35:07 +0530] "POST /admin/plugins/upload HTTP/1.1" 302 5 "https://morphues.amtestlab.local/admin/integrations" "Mozilla/5.0 (X11; Linux x86_64; rv:91.0) Gecko/20100101 Firefox/91.0"
+
+==> /var/log/morpheus/morpheus-ui/current <==
+2022-03-11_15:05:07.26287 [2022-03-11 15:05:07,260] [grails.rabbit.exchange.pluginReloadEvent.container-2] INFO  c.m.p.PluginManagerService - Found plugin jar: /var/opt/morpheus/morpheus-ui/plugins/TestPlugin-2.0.jar 
+2022-03-11_15:05:07.26881 Loading Plugin com.morpheusdata.tab.DnsaaSViewPlugin:2.0 from /var/opt/morpheus/morpheus-ui/plugins/TestPlugin-2.0.jar
+2022-03-11_15:05:07.54963 Unable to load plugin class from /var/opt/morpheus/morpheus-ui/plugins/TestPlugin-2.0.jar
+2022-03-11_15:05:07.54968 java.lang.ClassCastException: class com.morpheusdata.tab.DnsaaSViewPlugin cannot be cast to class com.morpheusdata.core.Plugin (com.morpheusdata.tab.DnsaaSViewPlugin is in unnamed module of loader java.net.FactoryURLClassLoader @dcf205f; com.morpheusdata.core.Plugin is in unnamed module of loader org.apache.catalina.loader.ParallelWebappClassLoader @61c7de08)
+2022-03-11_15:05:07.54981 	at com.morpheusdata.core.PluginManager.registerPlugin(PluginManager.java:85)
+2022-03-11_15:05:07.54984 	at com.morpheusdata.core.PluginManager.registerPlugin(PluginManager.java:122)
+2022-03-11_15:05:07.54984 	at com.morpheusdata.core.PluginManager$registerPlugin.call(Unknown Source)
+2022-03-11_15:05:07.54984 	at com.morpheus.plugin.PluginManagerService.registerPlugin(PluginManagerService.groovy:279)
+2022-03-11_15:05:07.54984 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+2022-03-11_15:05:07.54984 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+2022-03-11_15:05:07.54984 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+2022-03-11_15:05:07.54985 	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+2022-03-11_15:05:07.54985 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:101)
+2022-03-11_15:05:07.54985 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+2022-03-11_15:05:07.54987 	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:351)
+2022-03-11_15:05:07.54989 	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:64)
+2022-03-11_15:05:07.54991 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:168)
+2022-03-11_15:05:07.54992 	at com.morpheus.plugin.PluginManagerService$_registerPlugins_closure6.doCall(PluginManagerService.groovy:228)
+2022-03-11_15:05:07.54993 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+2022-03-11_15:05:07.54994 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+2022-03-11_15:05:07.54995 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+2022-03-11_15:05:07.54995 	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+2022-03-11_15:05:07.54996 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:101)
+2022-03-11_15:05:07.54997 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+2022-03-11_15:05:07.54998 	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:263)
+2022-03-11_15:05:07.54999 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1041)
+2022-03-11_15:05:07.54999 	at groovy.lang.Closure.call(Closure.java:405)
+2022-03-11_15:05:07.55000 	at groovy.lang.Closure.call(Closure.java:421)
+2022-03-11_15:05:07.55001 	at org.grails.orm.hibernate.GrailsHibernateTemplate.doExecute(GrailsHibernateTemplate.java:297)
+2022-03-11_15:05:07.55001 	at org.grails.orm.hibernate.GrailsHibernateTemplate.execute(GrailsHibernateTemplate.java:241)
+2022-03-11_15:05:07.55002 	at org.grails.orm.hibernate.GrailsHibernateTemplate.executeWithNewSession(GrailsHibernateTemplate.java:153)
+2022-03-11_15:05:07.55003 	at org.grails.orm.hibernate.AbstractHibernateDatastore.withNewSession(AbstractHibernateDatastore.java:360)
+2022-03-11_15:05:07.55004 	at org.grails.orm.hibernate.AbstractHibernateGormStaticApi.withNewSession(AbstractHibernateGormStaticApi.groovy:82)
+2022-03-11_15:05:07.55004 	at org.grails.datastore.gorm.GormEntity$Trait$Helper.withNewSession(GormEntity.groovy:1027)
+2022-03-11_15:05:07.55026 	at org.grails.datastore.gorm.GormEntity$Trait$Helper$withNewSession.call(Unknown Source)
+2022-03-11_15:05:07.55026 	at com.morpheus.plugin.PluginInstance.withNewSession(PluginInstance.groovy)
+2022-03-11_15:05:07.55026 	at com.morpheus.plugin.PluginInstance$withNewSession.call(Unknown Source)
+2022-03-11_15:05:07.55026 	at com.morpheus.plugin.PluginManagerService.registerPlugins(PluginManagerService.groovy:217)
+2022-03-11_15:05:07.55027 	at com.morpheus.plugin.PluginManagerService.createPluginManager(PluginManagerService.groovy:112)
+2022-03-11_15:05:07.55027 	at com.morpheus.plugin.PluginManagerService.reload(PluginManagerService.groovy:497)
+2022-03-11_15:05:07.55027 	at com.morpheus.plugin.PluginManagerService.onPluginReload(PluginManagerService.groovy:59)
+2022-03-11_15:05:07.55027 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+2022-03-11_15:05:07.55029 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+2022-03-11_15:05:07.55029 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+2022-03-11_15:05:07.55033 	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+2022-03-11_15:05:07.55036 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:101)
+2022-03-11_15:05:07.55039 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+2022-03-11_15:05:07.55041 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1217)
+2022-03-11_15:05:07.55044 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1041)
+2022-03-11_15:05:07.55046 	at org.codehaus.groovy.runtime.InvokerHelper.invokePogoMethod(InvokerHelper.java:1011)
+2022-03-11_15:05:07.55047 	at org.codehaus.groovy.runtime.InvokerHelper.invokeMethod(InvokerHelper.java:994)
+2022-03-11_15:05:07.55049 	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodN(ScriptBytecodeAdapter.java:180)
+2022-03-11_15:05:07.55073 	at com.bertram.rabbitmq.util.MessageServiceDelegate.delegateMessage(MessageServiceDelegate.groovy:54)
+2022-03-11_15:05:07.55073 	at jdk.internal.reflect.GeneratedMethodAccessor2509.invoke(Unknown Source)
+2022-03-11_15:05:07.55076 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+2022-03-11_15:05:07.55080 	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+2022-03-11_15:05:07.55089 	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+2022-03-11_15:05:07.55091 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:190)
+2022-03-11_15:05:07.55091 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:58)
+2022-03-11_15:05:07.55093 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:168)
+2022-03-11_15:05:07.55093 	at com.bertram.rabbitmq.util.MessageServiceDelegate.handleMessage(MessageServiceDelegate.groovy:30)
+2022-03-11_15:05:07.55094 	at jdk.internal.reflect.GeneratedMethodAccessor2508.invoke(Unknown Source)
+2022-03-11_15:05:07.55095 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+2022-03-11_15:05:07.55097 	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+2022-03-11_15:05:07.55098 	at org.springframework.util.MethodInvoker.invoke(MethodInvoker.java:280)
+2022-03-11_15:05:07.55101 	at org.springframework.amqp.rabbit.listener.adapter.MessageListenerAdapter.invokeListenerMethod(MessageListenerAdapter.java:363)
+2022-03-11_15:05:07.55107 	at org.springframework.amqp.rabbit.listener.adapter.MessageListenerAdapter.onMessage(MessageListenerAdapter.java:292)
+2022-03-11_15:05:07.55112 	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:1542)
+2022-03-11_15:05:07.55117 	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.actualInvokeListener(AbstractMessageListenerContainer.java:1468)
+2022-03-11_15:05:07.55119 	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:1456)
+2022-03-11_15:05:07.55121 	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:1451)
+2022-03-11_15:05:07.55123 	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.executeListener(AbstractMessageListenerContainer.java:1400)
+2022-03-11_15:05:07.55127 	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.doReceiveAndExecute(SimpleMessageListenerContainer.java:880)
+2022-03-11_15:05:07.55128 	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.receiveAndExecute(SimpleMessageListenerContainer.java:864)
+2022-03-11_15:05:07.55131 	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.access$1600(SimpleMessageListenerContainer.java:78)
+2022-03-11_15:05:07.55133 	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.mainLoop(SimpleMessageListenerContainer.java:1147)
+2022-03-11_15:05:07.55136 	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1053)
+2022-03-11_15:05:07.55136 	at java.base/java.lang.Thread.run(Unknown Source)
+2022-03-11_15:05:07.55435 [2022-03-11 15:05:07,554] [grails.rabbit.exchange.pluginReloadEvent.container-2] WARN  c.m.p.PluginManagerService - Done reloading Morpheus plugins... 
+
+==> /var/log/morpheus/nginx/morpheus-ssl-access.log <==
+192.168.4.31 - - [11/Mar/2022:20:35:07 +0530] "GET /admin/integrations HTTP/1.1" 200 61792 "https://morphues.amtestlab.local/admin/integrations" "Mozilla/5.0 (X11; Linux x86_64; rv:91.0) Gecko/20100101 Firefox/91.0"
+192.168.4.31 - - [11/Mar/2022:20:35:07 +0530] "GET /assets/icons.svg HTTP/1.1" 200 1398 "https://morphues.amtestlab.local/admin/integrations" "Mozilla/5.0 (X11; Linux x86_64; rv:91.0) Gecko/20100101 Firefox/91.0"
+192.168.4.31 - - [11/Mar/2022:20:35:08 +0530] "GET /admin/integrations?tableColumns=adminservice-status-icon%2Cadminservice-logo%2Cadminservice-name%2Cadminservice-status-text&order=asc&sort=name&max=25&offset=0&_=1647011107893 HTTP/1.1" 200 1543 "https://morphues.amtestlab.local/admin/integrations" "Mozilla/5.0 (X11; Linux x86_64; rv:91.0) Gecko/20100101 Firefox/91.0"
+192.168.4.31 - - [11/Mar/2022:20:35:08 +0530] "GET /admin/plugins?filter.phrase=&_csrf=36d9fada-8f3b-4aff-b323-8875269a97ea&direction=&sort=&phrase=&max=&offset=&remote=true&_=1647011107895 HTTP/1.1" 200 1017 "https://morphues.amtestlab.local/admin/integrations" "Mozilla/5.0 (X11; Linux x86_64; rv:91.0) Gecko/20100101 Firefox/91.0"
+192.168.4.31 - - [11/Mar/2022:20:35:08 +0530] "GET /admin/packages?filter.phrase=&_csrf=36d9fada-8f3b-4aff-b323-8875269a97ea&direction=&sort=&phrase=&max=&offset=&remote=true&_=1647011107894 HTTP/1.1" 200 392 "https://morphues.amtestlab.local/admin/integrations" "Mozilla/5.0 (X11; Linux x86_64; rv:91.0) Gecko/20100101 Firefox/91.0"
+192.168.4.31 - - [11/Mar/2022:20:35:08 +0530] "GET /admin/distributed-worker?filter.phrase=&currentView=table.view.distributedWorker.default&tableColumns=name%2CapiKey%2CproxyPort&_csrf=36d9fada-8f3b-4aff-b323-8875269a97ea&order=asc&sort=name&max=25&offset=0&_=1647011107896 HTTP/1.1" 200 1338 "https://morphues.amtestlab.local/admin/integrations" "Mozilla/5.0 (X11; Linux x86_64; rv:91.0) Gecko/20100101 Firefox/91.0"
+192.168.4.31 - - [11/Mar/2022:20:35:08 +0530] "GET /operations/notifications?_=1647011107897 HTTP/1.1" 200 38 "https://morphues.amtestlab.local/admin/integrations" "Mozilla/5.0 (X11; Linux x86_64; rv:91.0) Gecko/20100101 Firefox/91.0"
+192.168.4.31 - - [11/Mar/2022:20:35:37 +0530] "GET /admin/packages?filter.phrase=&_csrf=36d9fada-8f3b-4aff-b323-8875269a97ea&direction=&sort=&phrase=&max=&offset=&remote=true&_=1647011107899 HTTP/1.1" 200 392 "https://morphues.amtestlab.local/admin/integrations" "Mozilla/5.0 (X11; Linux x86_64; rv:91.0) Gecko/20100101 Firefox/91.0"
+192.168.4.31 - - [11/Mar/2022:20:35:37 +0530] "GET /admin/plugins?filter.phrase=&_csrf=36d9fada-8f3b-4aff-b323-8875269a97ea&direction=&sort=&phrase=&max=&offset=&remote=true&_=1647011107900 HTTP/1.1" 200 1017 "https://morphues.amtestlab.local/admin/integrations" "Mozilla/5.0 (X11; Linux x86_64; rv:91.0) Gecko/20100101 Firefox/91.0"
+192.168.4.31 - - [11/Mar/2022:20:35:37 +0530] "GET /admin/integrations?tableColumns=adminservice-status-icon%2Cadminservice-logo%2Cadminservice-name%2Cadminservice-status-text&order=asc&sort=name&max=25&offset=0&_=1647011107898 HTTP/1.1" 200 1543 "https://morphues.amtestlab.local/admin/integrations" "Mozilla/5.0 (X11; Linux x86_64; rv:91.0) Gecko/20100101 Firefox/91.0"
+192.168.4.31 - - [11/Mar/2022:20:35:37 +0530] "GET /admin/distributed-worker?filter.phrase=&currentView=table.view.distributedWorker.default&tableColumns=distributed-worker-name%2Cdistributed-worker-apiKey%2Cdistributed-worker-proxy-port&_csrf=36d9fada-8f3b-4aff-b323-8875269a97ea&order=asc&sort=name&max=25&offset=0&_=1647011107901 HTTP/1.1" 200 1338 "https://morphues.amtestlab.local/admin/integrations" "Mozilla/5.0 (X11; Linux x86_64; rv:91.0) Gecko/20100101 Firefox/91.0"
+
+
